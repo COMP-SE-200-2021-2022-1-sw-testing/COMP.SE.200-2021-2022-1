@@ -55,10 +55,14 @@ The application is an E-commerce store selling food products from various small 
 The food producers can add their products via a previously created portal. The producers can leave some fields blank if they do not want to specify some attributes like category or calories. It has been decided that the store front end is responsible for handling these missing values. Front end is also responsible for making sure that the product descriptions look similar i.e. the first word of a sentence starts with an upper-case letter and that prices are shown with two decimal accuracy.
 
 # Test environment
-Mocha[[3]](#references) + chai[[4]](#references), Travis CI (CI pipeline)[[5]](#references) and Coveralls[[6]](#references)
 <!-- Description of the chosen tools, packages, libraries, etc. including possible links to web sources (tutorials, homepages, etc). 
 Why these tools were chosen? 
 A (UML) diagram of your test setup. The diagram can be an activity or sequence diagram, which ever feels more natural. The diagram can be high-level (abstract), but it should illustrate how your test setup should work and how the chosen tools should interact with each other. -->
+Mocha[[3]](#references) + chai[[4]](#references), Travis CI (CI pipeline)[[5]](#references) and Coveralls[[6]](#references)  
+Draft version of sequence diagram. TODO: in order to make a right sequence I need to get grasp how CICD+coveralls+nodejs work together.
+![](../out/docs/testing_sequence/Testing%20Sequence%20(WIP).png)
+
+
 
 # Test cases
 <!-- What kind of tests are to be performed (unit, integration, ...) ? 
@@ -105,10 +109,11 @@ TODO: elaborate this part, maybe refer to DoD
 # References
 <!-- List of any and all references used in the document. -->
   [1] https://marketplace.visualstudio.com/items?itemName=sz-p.dependencygraph  
-  [2] https://github.com/juanallo/vscode-dependency-cruiser
-  [3] https://mochajs.org/
-  [4] https://www.chaijs.com/
-  [5] https://www.travis-ci.com/
-  [6] https://coveralls.io/
+  [2] https://github.com/juanallo/vscode-dependency-cruiser  
+  [3] https://mochajs.org/  
+  [4] https://www.chaijs.com/  
+  [5] https://www.travis-ci.com/  
+  [6] https://coveralls.io/  
+  
 
   
