@@ -29,9 +29,13 @@ Sang Nguyen
 - [Definitions, acronyms and abbreviations](#definitions-acronyms-and-abbreviations)
 - [Introduction](#introduction)
   - [Context](#context)
-  - [Functions to test (TODO: refine it!)](#functions-to-test-todo-refine-it)
 - [Test environment](#test-environment)
 - [Test cases](#test-cases)
+  - [Functions to test (TODO: refine it!)](#functions-to-test-todo-refine-it)
+  - [What functions do not test](#what-functions-do-not-test)
+  - [Test results](#test-results)
+  - [Agreed error classification or categorization](#agreed-error-classification-or-categorization)
+  - [Common understanding of term "PASSED"](#common-understanding-of-term-passed)
 - [References](#references)
 
 # Definitions, acronyms and abbreviations
@@ -50,6 +54,20 @@ The application is an E-commerce store selling food products from various small 
 
 The food producers can add their products via a previously created portal. The producers can leave some fields blank if they do not want to specify some attributes like category or calories. It has been decided that the store front end is responsible for handling these missing values. Front end is also responsible for making sure that the product descriptions look similar i.e. the first word of a sentence starts with an upper-case letter and that prices are shown with two decimal accuracy.
 
+# Test environment
+Mocha[[3]](#references) + chai[[4]](#references), Travis CI (CI pipeline)[[5]](#references) and Coveralls[[6]](#references)
+<!-- Description of the chosen tools, packages, libraries, etc. including possible links to web sources (tutorials, homepages, etc). 
+Why these tools were chosen? 
+A (UML) diagram of your test setup. The diagram can be an activity or sequence diagram, which ever feels more natural. The diagram can be high-level (abstract), but it should illustrate how your test setup should work and how the chosen tools should interact with each other. -->
+
+# Test cases
+<!-- What kind of tests are to be performed (unit, integration, ...) ? 
+What parts of the library are to be tested and what aren't? 
+Are any functions or components excluded from testing? Why?
+How the test results will be documented?
+If bugs or issues are found, how are they classified or categorized?
+When the tests are considered "passed"? -->
+As far as it is a library, and its functionality is quite limited, we assume that glass box testing methods should be enough to ensure the quality of this library. Particularly, unit testing and integration testing should be implemented. In order to be successful and fit in a timeframe, the team should focus on testing the most essential parts of the library.
 ## Functions to test (TODO: refine it!)
 In order to maximize test coverage with only 10 source files, the team decided to use analytical approach that complements the decision process. Basically, visualizing dependencies between given functions shows a clear picture of what the most used functions are. If tests cover these 10 essential files, it will mean that N% (will check the number after test coverage measuring) of a code base is tested and 'insured'. Dependency Graph[[1]](#references) and Dependency Cruiser[[2]](#references) VS Code extensions were used as dependency visualizing tools. The results of visualisation are shown bellow. 
 ![Dependency Graph View](../.dependencygraph/dependencygraph.UmaUIE3u.svg)  
@@ -69,22 +87,28 @@ Based on given graphs, the team found out that next functions are met criteria:
 - isArrayLike
 - isArgument
 
-`*` - shows that a function and all its dependencies are fully testable, it doesn't have deps from `.internal` 
+`*` - shows that a function and all its dependencies are fully testable, it doesn't have deps from `.internal`  
 
-# Test environment
-<!-- Description of the chosen tools, packages, libraries, etc. including possible links to web sources (tutorials, homepages, etc). 
-Why these tools were chosen? 
-A (UML) diagram of your test setup. The diagram can be an activity or sequence diagram, which ever feels more natural. The diagram can be high-level (abstract), but it should illustrate how your test setup should work and how the chosen tools should interact with each other. -->
-# Test cases
-<!-- What kind of tests are to be performed (unit, integration, ...) ? 
-What parts of the library are to be tested and what aren't? 
-Are any functions or components excluded from testing? Why?
-How the test results will be documented?
-If bugs or issues are found, how are they classified or categorized?
-When the tests are considered "passed"? -->
+## What functions do not test 
+Other functions are excluded from test cases because there are not enough resources to test all cases. Probably, they might be covered during evolving of the library. Moreover, the code under `.internal` folder is fully exempted from the testing because it is out of the team's duties (`.internal` is owned by LimPoPo team).  
+
+## Test results
+TODO: probably after investigating Travis CI (CI pipeline) and Coveralls
+
+## Agreed error classification or categorization
+TODO: elaborate this part 
+
+## Common understanding of term "PASSED"
+TODO: elaborate this part, maybe refer to DoD
+
+
 # References
 <!-- List of any and all references used in the document. -->
   [1] https://marketplace.visualstudio.com/items?itemName=sz-p.dependencygraph  
   [2] https://github.com/juanallo/vscode-dependency-cruiser
+  [3] https://mochajs.org/
+  [4] https://www.chaijs.com/
+  [5] https://www.travis-ci.com/
+  [6] https://coveralls.io/
 
   
