@@ -1,8 +1,6 @@
-# Student template
+# Student template [![Coverage Status](https://coveralls.io/repos/github/DiyazY/COMP.SE.200-2021-2022-1/badge.svg?branch=main)](https://coveralls.io/github/DiyazY/COMP.SE.200-2021-2022-1?branch=main)
 
 ## Purpose of this repository
-
-[![Coverage Status](https://coveralls.io/repos/github/COMP-SE-200-2021-2022-1-sw-testing/COMP.SE.200-2021-2022-1/badge.svg?branch=main)](https://coveralls.io/github/COMP-SE-200-2021-2022-1-sw-testing/COMP.SE.200-2021-2022-1?branch=main)
 
 This is a project template for students participating in Software Testing course
 at Tampere University.
