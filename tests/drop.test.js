@@ -1,5 +1,6 @@
-import drop from "../src/drop.js";
+import {drop} from "./entryFileForDepsTree.js";
 import chai from "chai";
+
 
 const expect = chai.expect;
 

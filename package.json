@@ -5,12 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha 'tests/**/*.test.js'"
+    "test": "NODE_ENV=test mocha 'tests/**/*.test.js'",
+    "coverage": "c8 --include=src --exclude=src/.internal --reporter=lcov npm test",
+    "check-coverage": "c8 --include=src --exclude=src/.internal npm test"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "c8": "^7.10.0",
     "chai": "^4.3.4",
     "mocha": "^9.1.3"
   }
