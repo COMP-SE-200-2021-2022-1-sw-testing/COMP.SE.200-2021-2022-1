@@ -1,4 +1,4 @@
-# Student template [![Coverage Status](https://coveralls.io/repos/github/DiyazY/COMP.SE.200-2021-2022-1/badge.svg?branch=main)](https://coveralls.io/github/DiyazY/COMP.SE.200-2021-2022-1?branch=main)
+# Student template [![Coverage Status](https://coveralls.io/repos/github/DiyazY/COMP.SE.200-2021-2022-1/badge.svg?branch=main)](https://coveralls.io/github/DiyazY/COMP.SE.200-2021-2022-1?branch=main) [workflow](https://github.com/diyazy/COMP.SE.200-2021-2022-1/actions/workflows/node.js.yml/badge.svg) [![GitHub license](https://img.shields.io/github/license/DiyazY/audit)](https://github.com/DiyazY/COMP.SE.200-2021-2022-1/blob/dev/LICENSE)
 
 ## Purpose of this repository
 
