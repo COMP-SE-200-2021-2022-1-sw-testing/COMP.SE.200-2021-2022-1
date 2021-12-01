@@ -34,6 +34,10 @@ describe("drop function", () => {
       expect(drop(array, m)).to.deep.equal([3, 4]);
     });
 
+    it("it should return initial array if n is less than 0", async () => {
+        expect(drop([1,2,3,4], -1)).to.deep.equal([1,2,3,4]);
+      });
+
     // it("it should return 2n array if array is 4 and m is 2", async () => {
     //     const array = "qwer";
     //     const m = 2;
