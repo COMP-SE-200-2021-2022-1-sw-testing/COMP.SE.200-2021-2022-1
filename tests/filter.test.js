@@ -14,7 +14,6 @@ describe("filter function", () => {
   });
 
   it("if collection is null return [[]]", async () => {
-
     expect(filter(null, ({ active }) => active)).to.deep.equal([[]]);
   });
 });
