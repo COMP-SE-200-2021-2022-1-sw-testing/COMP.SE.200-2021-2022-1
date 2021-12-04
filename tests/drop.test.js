@@ -18,9 +18,9 @@ describe("drop function", () => {
     });
 
     // // todo: investigate this part!
-    // it("it should return empty array if array param is string 'qwe'", async () => {
-    //   expect(drop("qwe")).to.deep.equal([]);
-    // });
+    it("it should return empty array if array param is string 'qwe'", async () => {
+      expect(drop("qwe")).to.deep.equal([]);
+    });
 
     it("it should return empty array if array param is number 123", async () => {
       expect(drop(123)).to.deep.equal([]);
@@ -37,11 +37,5 @@ describe("drop function", () => {
     it("it should return initial array if n is less than 0", async () => {
         expect(drop([1,2,3,4], -1)).to.deep.equal([1,2,3,4]);
       });
-
-    // it("it should return 2n array if array is 4 and m is 2", async () => {
-    //     const array = "qwer";
-    //     const m = 2;
-    //     expect(drop(array, m)).to.deep.equal(['e', 'r']);
-    //   });
   });
 });

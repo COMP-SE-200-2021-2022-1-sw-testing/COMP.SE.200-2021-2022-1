@@ -8,7 +8,7 @@ describe("clamp function", () => {
     expect(clamp(-10, -5, 5)).to.equal(-5);
   });
 
-//   it("if it clamps 10 with -5 and 5 return 5", async () => {
-//     expect(clamp(10, -5, 5)).to.equal(5);
-//   });
+  it("if it clamps 10 with -5 and 5 return 5", async () => {
+    expect(clamp(10, -5, 5)).to.equal(5);
+  });
 });

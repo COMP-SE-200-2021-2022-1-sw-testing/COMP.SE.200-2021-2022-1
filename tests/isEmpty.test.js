@@ -12,9 +12,9 @@ describe("isEmpty function", () => {
     expect(isEmpty(undefined)).to.equal(true);
   });
 
-//   it("if value is 0 return false", async () => {
-//     expect(isEmpty(0)).to.equal(false);
-//   });
+  it("if value is 0 return false", async () => {
+    expect(isEmpty(0)).to.equal(true);
+  });
 
   it("if value is '' return true", async () => {
     expect(isEmpty("")).to.equal(true);
@@ -36,19 +36,19 @@ describe("isEmpty function", () => {
     expect(isEmpty(new Map())).to.equal(true);
   });
 
-//   it("if prototype is seeded return false", async () => {
-//     let animal = {
-//       eats: true,
-//     };
+  it("if prototype is seeded return false", async () => {
+    let animal = {
+      eats: true,
+    };
 
-//     function Rabbit(name) {
-//       this.name = name;
-//     }
+    function Rabbit(name) {
+      this.name = name;
+    }
 
-//     Rabbit.prototype = animal;
+    Rabbit.prototype = animal;
 
-//     let rabbit = new Rabbit("White Rabbit");
+    let rabbit = new Rabbit("White Rabbit");
 
-//     expect(isEmpty(rabbit.prototype).to.equal(false));
-//   });
+    expect(isEmpty(rabbit.prototype).to.equal(false));
+  });
 });
