@@ -1,0 +1,31 @@
+@startuml Testing Sequence (WIP)
+
+header COMP.SE.200-2021-2022-1
+
+title Testing View: Testing Sequence
+
+actor "Tester/Dev" as user
+
+collections "Repository" as code
+
+queue "GitHub Actions" as cicd
+
+participant "Coveralls" as coveralls
+
+group test coverage [metrics update phase]
+    user-->code : pushes changes to
+    code --> cicd : triggers
+    note over cicd: runs build, tests\r\nand generates coverage file\r\n[nodejs, mocha+chai, c8]
+    cicd --> coveralls : sends lcov file to
+    note over coveralls: updates metrics
+else metrics read phase
+    user-->code : opens project's page
+    code --> coveralls : requests metrics
+    code <-- coveralls : returns metrics
+
+    user<--code : metrics badge is visible to
+    user-->code: clicks on coveralls metric badge
+    code --> coveralls : redirects to
+    user<--coveralls : detailed metrics are visible to
+end
+@enduml
