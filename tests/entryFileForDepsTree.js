@@ -40,6 +40,7 @@ import toInteger from "../src/toInteger.js";
 import toString from "../src/toString.js";
 import upperFirst from "../src/upperFirst.js";
 import words from "../src/words.js";
+import slice from "../src/slice.js";
 
 export {
   toNumber,
@@ -84,4 +85,5 @@ export {
   toString,
   upperFirst,
   words,
+  slice
 };
